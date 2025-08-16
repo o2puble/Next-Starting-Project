@@ -1,0 +1,30 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.item {
+    color: #6b7280;
+}
+
+.link {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+        color: #1d4ed8;
+        text-decoration: underline;
+    }
+}
+
+.text {
+    color: #111827;
+    font-weight: 500;
+}
+
+.separator {
+    color: #9ca3af;
+}

@@ -1,0 +1,123 @@
+.checkboxWrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+
+    &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+.checkbox {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+
+    // Size variants
+    &.small {
+        width: 16px;
+        height: 16px;
+        border-width: 1.5px;
+    }
+
+    &.medium {
+        width: 20px;
+        height: 20px;
+        border-width: 2px;
+    }
+
+    &.large {
+        width: 24px;
+        height: 24px;
+        border-width: 2.5px;
+    }
+
+    // Style variants
+    &.primary {
+        &.checked {
+            background-color: #000;
+            border-color: #000;
+
+            &:hover {
+                background-color: #333;
+                border-color: #333;
+            }
+        }
+    }
+
+    &.secondary {
+        border-color: #666;
+
+        &.checked {
+            background-color: #666;
+            border-color: #666;
+
+            &:hover {
+                background-color: #888;
+                border-color: #888;
+            }
+        }
+    }
+
+    &.outline {
+        &.checked {
+            background-color: transparent;
+            border-color: #000;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+}
+
+.checkIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    color: #fff;
+
+    .small & {
+        width: 10px;
+        height: 10px;
+    }
+
+    .large & {
+        width: 14px;
+        height: 14px;
+    }
+
+    .outline & {
+        color: #000;
+    }
+}
+
+.label {
+    font-size: 14px;
+    color: #000;
+
+    .small & {
+        font-size: 12px;
+    }
+
+    .medium & {
+        font-size: 14px;
+    }
+
+    .large & {
+        font-size: 16px;
+    }
+}

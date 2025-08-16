@@ -1,0 +1,113 @@
+.tabsWrap {
+    display: flex;
+    gap: 2px;
+
+    &.default {
+        border-bottom: 1px solid #e0e0e0;
+
+        .tab {
+            border: none;
+            background: none;
+            padding: 12px 24px;
+            color: #666;
+
+            &:hover:not(.disabled) {
+                color: #2563eb;
+            }
+
+            &.active {
+                color: #2563eb;
+                font-weight: 500;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                    background: #2563eb;
+                }
+            }
+        }
+    }
+
+    &.underline {
+        .tab {
+            border: none;
+            background: none;
+            padding: 12px 24px;
+            color: #666;
+            border-bottom: 2px solid transparent;
+
+            &:hover:not(.disabled) {
+                color: #2563eb;
+                border-bottom-color: #93c5fd;
+            }
+
+            &.active {
+                color: #2563eb;
+                font-weight: 500;
+                border-bottom-color: #2563eb;
+            }
+        }
+    }
+
+    &.contained {
+        background: #f3f4f6;
+        padding: 4px;
+        border-radius: 8px;
+        gap: 0;
+
+        .tab {
+            border: none;
+            background: none;
+            padding: 8px 16px;
+            color: #666;
+            border-radius: 6px;
+
+            &:hover:not(.disabled) {
+                color: #2563eb;
+            }
+
+            &.active {
+                background: white;
+                color: #2563eb;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &.small {
+        .tab {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+    }
+
+    &.medium {
+        .tab {
+            font-size: 16px;
+            padding: 12px 24px;
+        }
+    }
+
+    &.large {
+        .tab {
+            font-size: 18px;
+            padding: 16px 32px;
+        }
+    }
+}
+
+.tab {
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: normal;
+
+    &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}

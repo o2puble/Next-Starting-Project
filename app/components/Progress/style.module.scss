@@ -1,0 +1,71 @@
+.progressWrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100px;
+    &.small {
+        .progressBar {
+            height: 4px;
+        }
+        .label {
+            font-size: 12px;
+        }
+    }
+
+    &.medium {
+        .progressBar {
+            height: 6px;
+        }
+        .label {
+            font-size: 14px;
+        }
+    }
+
+    &.large {
+        .progressBar {
+            height: 8px;
+        }
+        .label {
+            font-size: 16px;
+        }
+    }
+}
+
+.progressBar {
+    flex: 1;
+    background: blue;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    transition: width 0.3s ease;
+
+    &.primary {
+        background: #2563eb;
+    }
+
+    &.secondary {
+        background: #6b7280;
+    }
+
+    &.success {
+        background: #16a34a;
+    }
+
+    &.warning {
+        background: #d97706;
+    }
+
+    &.error {
+        background: #dc2626;
+    }
+}
+
+.label {
+    color: #4b5563;
+    font-weight: 500;
+    min-width: 40px;
+    text-align: right;
+}
